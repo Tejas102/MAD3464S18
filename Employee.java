@@ -3,34 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Serialization;
 
 /**
  *
- * @author Tejas
+ * @author macstudent
  */
-public class Employee extends Person {
-    String eID;
-    String joiningDate;
-    int deptNo;
+public class Employee implements java.io.Serialization {
+    public String name;
+    public String address;
+    public int SSN;
+    public int number;
     
-    Employee()
+    public void mailCheque()
     {
-        this.eID = "E000";
-        this.joiningDate = "DD MM YY";
-        this.deptNo = 0;
-    }
-    Employee(String name, String address, int age, String eID, String joiningDate, int deptNo)
-    {
-        super(name, address, age);
-        this.eID = eID;
-        this.joiningDate = joiningDate;
-        this.deptNo = deptNo;
-    }
-    @Override
-    public String toString()
-    {
-        String personalDetails = super.toString();
-        String data = "Employee ID : " + eID + "\n Joining Date : " + this.joiningDate + "\n Dept No : " + this.deptNo;
-        return data;
+        System.out.println("Mailing a cheque to " + name + " " + address);   
     }
 }
